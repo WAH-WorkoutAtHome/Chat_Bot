@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+    color: #1E1E1E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chatbot-container {
+    background-color: #000;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.chat-header {
+    background-color: #000000;
+    color: #FFF;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-body {
+    padding: 15px;
+    background-color: #6CF3E5;
+    flex-grow: 1;
+    min-height: 300px;
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #FFF;
+    gap: 10px;
+}
+
+.chat-footer input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    min-width: 0;
+}
+
+.chat-footer button {
+    background-color: #0AC4BA;
+    color: #FFF;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.chat-footer button:hover {
+    background-color: #08A899;
+}
+
+.chat-message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word;
+    display: inline-block;
+    clear: both;
+}
+
+.user-message {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #333;
+    color: #FFF;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.loading-message {
+    color: #888;
+    text-align: center;
+    font-style: italic;
+}
+
+.error-message {
+    background-color: #FF4444;
+    color: #FFF;
+    text-align: center;
+    font-style: italic;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+    .chatbot-container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .chat-footer {
+        flex-direction: column;
+    }
+    .chat-footer input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .chat-footer button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .chatbot-container {
+        width: 80%;
+        max-width: 800px;
+    }
+    .chat-header {
+        font-size: 1.2rem;
+    }
+    .chat-footer input {
+        font-size: 1rem;
+    }
+    .chat-footer button {
+        font-size: 1rem;
+    }
+}
