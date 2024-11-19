@@ -3,41 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gemini API Request</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    #result {
-      margin-top: 20px;
-      padding: 10px;
-      border: 1px solid #ddd;
-      background-color: #f9f9f9;
-    }
-    input, button {
-      padding: 10px;
-      font-size: 16px;
-    }
-    button {
-      margin-left: 10px;
-    }
-  </style>
+  <title>Workout At Home Chatbot</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <h1>Gemini API Request</h1>
-  
-  <label for="prompt">Enter Prompt:</label>
-  <input type="text" id="prompt" placeholder="Type your question...">
-  <button onclick="sendRequest()">Submit</button>
-
-  <div id="result">
-    <h2>Response:</h2>
-    <p id="responseText">No response yet...</p>
+  <div class="chatbot-container">
+    <div class="chat-header">Workout At Home</div>
+    <div class="chat-body" id="chatBody">
+      <p id="responseText"><em>Selamat datang di WAH Chat-Bot...</em></p>
+    </div>
+    <div class="chat-footer">
+      <input type="text" id="prompt" placeholder="Isi pesan di sini..." onkeydown="checkEnter(event)">
+    </div>
   </div>
 
   <script src="JS/fetch.js"></script>
-
 </body>
 </html>
