@@ -1,5 +1,6 @@
 async function sendRequest() {
-  const prompt = document.getElementById("prompt").value;
+  const inputElement = document.getElementById("prompt");
+  const prompt = inputElement.value;
 
   if (!prompt.trim()) {
       document.getElementById("responseText").innerText = 'Silakan masukkan pesan!';
@@ -17,6 +18,8 @@ async function sendRequest() {
   loadingMessage.className = "chat-message loading-message";
   chatBody.appendChild(loadingMessage);
   chatBody.scrollTop = chatBody.scrollHeight;
+
+  inputElement.value = "";
 
   try {
       const response = await fetch('http://localhost:3000/gemini?prompt=' + encodeURIComponent(prompt), {
